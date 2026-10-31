@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Tells GitHub to only publish the files inside wwwroot
-          path: './wwwroot'
+          path: './Profile/wwwroot'
 
       - name: Deploy to GitHub Pages
         id: deployment
