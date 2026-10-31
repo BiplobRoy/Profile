@@ -2,13 +2,13 @@
 /* ROOT VARIABLES & THEME                     */
 /* ========================================== */
 :root {
-    --bg: #050911; /* Deep space tech blue */
-    --panel: rgba(13, 22, 41, 0.8); /* Glassmorphism transparent panels */
+    --bg: #060913; /* Deep tech blue */
+    --panel: rgba(13, 22, 41, 0.85); /* Slightly more opaque panels for readability */
     --text: #e6edf7;
     --muted: #8b9eb5;
     --accent: #38bdf8;
     --accent2: #22d3ee;
-    --border: rgba(56, 189, 248, 0.15); /* Subtle glowing borders */
+    --border: rgba(56, 189, 248, 0.15);
 }
 
 * {
@@ -21,22 +21,47 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ========================================== */
+/* THEMED ENGINEERING BACKGROUND              */
+/* ========================================== */
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     color: var(--text);
     line-height: 1.6;
     background-color: var(--bg);
-    /* ========================================== */
-    /* CUSTOM SVG TECH BACKGROUND                 */
-    /* Combines AI nodes, ETL streams & DotNet    */
-    /* ========================================== */
-    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='rgba(56, 189, 248, 0.08)' stroke-width='1.5' fill='none'%3E%3C!-- AI Neural Nodes --%3E%3Ccircle cx='40' cy='40' r='3' fill='rgba(56, 189, 248, 0.2)'/%3E%3Ccircle cx='160' cy='40' r='3' fill='rgba(56, 189, 248, 0.2)'/%3E%3Cline x1='40' y1='40' x2='160' y2='40'/%3E%3Cline x1='40' y1='40' x2='100' y2='100'/%3E%3Cline x1='160' y1='40' x2='100' y2='100'/%3E%3Ccircle cx='100' cy='100' r='4' fill='rgba(34, 211, 238, 0.3)'/%3E%3C!-- ETL Pipeline Flow --%3E%3Cpath d='M 100 100 L 100 160 L 40 160' stroke-dasharray='4 4'/%3E%3Cpath d='M 100 100 L 160 100 L 160 160' stroke-dasharray='4 4'/%3E%3Ccircle cx='100' cy='160' r='2' fill='rgba(34, 211, 238, 0.2)'/%3E%3Ccircle cx='160' cy='160' r='2' fill='rgba(34, 211, 238, 0.2)'/%3E%3C!-- DotNet Structural Brackets --%3E%3Cpath d='M 20 20 L 10 20 L 10 30 M 180 180 L 190 180 L 190 170' stroke='rgba(56, 189, 248, 0.15)'/%3E%3C!-- Small Data Dots --%3E%3Ccircle cx='100' cy='40' r='1.5' fill='rgba(255, 255, 255, 0.2)'/%3E%3Ccircle cx='40' cy='100' r='1.5' fill='rgba(255, 255, 255, 0.2)'/%3E%3Ccircle cx='160' cy='100' r='1.5' fill='rgba(255, 255, 255, 0.2)'/%3E%3C/g%3E%3C/svg%3E"),
-    /* Top glow */
-    radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.25) 0%, transparent 60%);
-    background-size: 250px 250px, 100% 100%;
-    background-position: center, top center;
+    /* Base glowing atmosphere */
+    background-image: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(56, 189, 248, 0.1), transparent 60%), radial-gradient(ellipse 40% 40% at 100% 100%, rgba(34, 211, 238, 0.05), transparent 50%);
     background-attachment: fixed;
 }
+
+    /* The Technical Illustration Layer */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMid slice'%3E%3C!-- AI NEURAL NETWORK (Top Left) --%3E%3Cg stroke='rgba(56,189,248,0.2)' stroke-width='1.5' fill='none'%3E%3Cpath d='M50 150 L180 100 L250 200 L150 280 Z'/%3E%3Cpath d='M180 100 L320 150 L250 200'/%3E%3Cpath d='M150 280 L280 350 L250 200'/%3E%3C/g%3E%3Cg fill='rgba(56,189,248,0.4)'%3E%3Ccircle cx='50' cy='150' r='4'/%3E%3Ccircle cx='180' cy='100' r='4'/%3E%3Ccircle cx='250' cy='200' r='5'/%3E%3Ccircle cx='150' cy='280' r='4'/%3E%3Ccircle cx='320' cy='150' r='4'/%3E%3Ccircle cx='280' cy='350' r='4'/%3E%3C/g%3E%3C!-- ETL PIPELINE (Top Right) --%3E%3Cg stroke='rgba(34,211,238,0.2)' stroke-width='2' fill='none' stroke-dasharray='6 6'%3E%3Cpath d='M1250 120 L1350 120 L1400 180 L1500 180'/%3E%3Cpath d='M1350 120 L1350 200 L1450 200'/%3E%3C/g%3E%3Cg fill='rgba(34,211,238,0.3)'%3E%3Crect x='1240' y='110' width='20' height='20' rx='4'/%3E%3Crect x='1340' y='110' width='20' height='20' rx='4'/%3E%3Crect x='1390' y='170' width='20' height='20' rx='4'/%3E%3Crect x='1490' y='170' width='20' height='20' rx='4'/%3E%3Crect x='1340' y='190' width='20' height='20' rx='4'/%3E%3Crect x='1440' y='190' width='20' height='20' rx='4'/%3E%3C/g%3E%3C!-- DOTNET / CODE SNIPPET (Bottom Left) --%3E%3Cg font-family='Consolas,monospace' fill='rgba(139,158,181,0.15)' font-size='18'%3E%3Ctext x='50' y='750'%3Epublic class DataPipeline&lt;T&gt; : IEtlProcess%3C/text%3E%3Ctext x='50' y='780'%3E%7B%3C/text%3E%3Ctext x='70' y='810'%3Epublic async Task ExecuteAsync()%3C/text%3E%3Ctext x='70' y='840'%3E%7B await _db.LoadAsync(_transform(data)); %7D%3C/text%3E%3Ctext x='50' y='870'%3E%7D%3C/text%3E%3C/g%3E%3C!-- ANALYTICS / DATA CHART (Bottom Right) --%3E%3Cg fill='none' stroke='rgba(56,189,248,0.15)' stroke-width='2'%3E%3Cpath d='M1150 800 L1200 750 L1250 780 L1300 700 L1350 720 L1400 650 L1450 680 L1500 600'/%3E%3C/g%3E%3Cg fill='rgba(56,189,248,0.2)'%3E%3Crect x='1150' y='800' width='20' height='50'/%3E%3Crect x='1200' y='770' width='20' height='80'/%3E%3Crect x='1250' y='790' width='20' height='60'/%3E%3Crect x='1300' y='720' width='20' height='130'/%3E%3Crect x='1350' y='740' width='20' height='110'/%3E%3Crect x='1400' y='680' width='20' height='170'/%3E%3Crect x='1450' y='710' width='20' height='140'/%3E%3C/g%3E%3Ctext x='1140' y='640' font-family='monospace' font-size='14' fill='rgba(56,189,248,0.2)'%3ESELECT * FROM Analytics%3C/text%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        /* MASK: Fades the background out in the center so text is perfectly readable */
+        -webkit-mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.6) 50%, #000 100%);
+        mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.6) 50%, #000 100%);
+    }
+
+    /* Grid Overlay (Adds that engineering "graph paper" texture) */
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        -webkit-mask-image: radial-gradient(ellipse at center, transparent 20%, #000 100%);
+        mask-image: radial-gradient(ellipse at center, transparent 20%, #000 100%);
+    }
 
 .wrap {
     max-width: 1000px;
@@ -60,7 +85,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(5, 9, 17, 0.75);
+    background: rgba(6, 9, 19, 0.85);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
 }
@@ -214,7 +239,7 @@ nav {
     left: 120px;
     right: 120px;
     border-radius: 16px;
-    background: linear-gradient(180deg, rgba(5, 9, 17, 0.1) 0%, rgba(5, 9, 17, 0.6) 100%);
+    background: linear-gradient(180deg, rgba(6, 9, 19, 0.1) 0%, rgba(6, 9, 19, 0.6) 100%);
     pointer-events: none;
 }
 
@@ -238,13 +263,30 @@ nav {
 
 .cover-dots {
     position: absolute;
-    bottom: 0px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 8px;
     z-index: 5;
 }
+
+    .cover-dots button {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border: none;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.35);
+        cursor: pointer;
+        transition: width 0.3s ease, background 0.3s ease;
+    }
+
+        .cover-dots button.active {
+            width: 24px;
+            background: var(--accent);
+        }
 
 /* ========================================== */
 /* PROFILE PHOTO                              */
@@ -322,7 +364,6 @@ nav {
     letter-spacing: 1px;
 }
 
-/* Document Style Bio Block */
 .hero-bio-container {
     max-width: 820px;
     margin: 0 auto;
