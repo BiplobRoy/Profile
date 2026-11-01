@@ -161,8 +161,14 @@ nav {
     }
 
 @media(max-width: 850px) {
-    nav ul {
+    /* Hide the text links on mobile */
+    nav ul li:not(.nav-actions) {
         display: none;
+    }
+
+    /* Keep the download buttons visible */
+    nav ul {
+        display: flex;
     }
 
     .nav-actions {
@@ -737,5 +743,58 @@ footer {
 
     .proj-card {
         padding: 20px;
+    }
+}
+
+/* ========================================== */
+/* MOBILE ADJUSTMENTS                         */
+/* ========================================== */
+@media(max-width: 600px) {
+    .profile-wrap {
+        margin-top: -65px;
+    }
+
+    .avatar-ring {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-name {
+        font-size: 34px;
+    }
+
+    .hero {
+        padding: 16px 0 40px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .hero-bio-container {
+        padding: 20px;
+    }
+
+    .exp-item {
+        padding: 20px;
+    }
+
+    .proj-card {
+        padding: 20px;
+    }
+
+    /* --- NEW ADDITION: Mobile Navigation Buttons --- */
+    .btn-nav {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+        .btn-nav svg {
+            width: 12px;
+            height: 12px;
+        }
+
+    nav .brand {
+        font-size: 16px;
     }
 }
