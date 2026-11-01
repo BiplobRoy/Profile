@@ -112,7 +112,7 @@
                     <h4>Databases</h4><ul>
                         <li>MS SQL Server (OLAP, Agent Jobs, Tuning)</li>
                         <li>PostgreSQL (Functions, Reporting)</li>
-                        <li>MongoDB</li>
+                        <li>MongoDB, MySQL</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -132,7 +132,7 @@
                 <div class="skill-card">
                     <h4>Tools</h4><ul>
                         <li>Git, Docker</li>
-                        <li>SQL Server Agent</li>
+                        <li>SQL Server Agent, Apache Superset</li>
                         <li>Airflow (basic)</li>
                     </ul>
                 </div>
@@ -188,47 +188,116 @@
             <div class="sec-title">Key Projects</div>
             <div class="proj-grid">
 
+                <!-- Project 1: SCRS -->
                 <div class="proj-card">
-                    <h4>SCRS — Smart Care Reporting Service (OLAP DW)</h4>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">SCRS — Smart Care Reporting Service</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Nov 2025 – Present</span>
+                    </div>
                     <div class="role">Data Engineer / DW Designer</div>
                     <p>Designed and implemented a centralized OLAP data warehouse (Snowflake Schema) to support large-scale reporting. Developed custom ETL pipelines using raw SQL, automated scheduling, and optimized queries to significantly reduce report execution time.</p>
                     <div class="tech"><b>Tech:</b> MS SQL Server, OLAP, Snowflake Schema, SQL Agent</div>
                 </div>
 
+                <!-- Project 2: Tera Support Mail Service -->
                 <div class="proj-card">
-                    <h4>Tera Support — Multi-Microservice Platform &amp; TSRS</h4>
-                    <div class="role">Backend Developer &amp; Data Architect</div>
-                    <p>Built a high-performance Data Transport Pipeline syncing data every second from transactional DBs into the TSRS OLAP Data Warehouse. Developed TSRS (.NET API) providing advanced dashboards, SLA filtering, and Excel exports.</p>
-                    <div class="tech"><b>Tech:</b> .NET 8, Kafka, Docker, PostgreSQL, OLAP</div>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">Tera Support — Mail Service</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Nov 2025 – Present</span>
+                    </div>
+                    <div class="role">Backend Developer</div>
+                    <p>Built an event-driven Mail Service where users configure mail accounts via app passwords. Automated ticket creation from incoming emails, threaded replies into ticket messages, and managed dynamic receiver lists for incident status updates. Fully integrated with Kafka for service-to-service communication (CRM, Incident, User, OTP).</p>
+                    <div class="tech"><b>Tech:</b> .NET 8, Kafka, SMTP/IMAP, Docker</div>
                 </div>
 
+                <!-- Project 3: Tera Support TSRS -->
                 <div class="proj-card">
-                    <h4>BTMS AI Chatbot (Conversational AI)</h4>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">Tera Support — TSRS Reporting</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Nov 2025 – Present</span>
+                    </div>
+                    <div class="role">Backend Developer &amp; Data Architect</div>
+                    <p>Built a high-performance Data Transport Pipeline syncing data every second from User and Incident transactional DBs into the TSRS OLAP Data Warehouse. Developed TSRS (.NET API) to generate user-requested reports via Superset, featuring advanced SLA filtering and Excel exports.</p>
+                    <div class="tech"><b>Tech:</b> PostgreSQL, OLAP, .NET API, Apache Superset</div>
+                </div>
+
+                <!-- Project 4: Tera Support Platform -->
+                <div class="proj-card">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">Tera Support — Multi-Microservice Platform</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Nov 2025 – Present</span>
+                    </div>
+                    <div class="role">Data Architect</div>
+                    <p>Designed the overarching event-driven architecture connecting User, Incident, CRM, and Device Manager modules. Orchestrated real-time data flow and complex business logic across all services using Kafka.</p>
+                    <div class="tech"><b>Tech:</b> Kafka, .NET 8, Microservices</div>
+                </div>
+
+                <!-- Project 5: BTMS AI Chatbot -->
+                <div class="proj-card">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">BTMS AI Chatbot (Conversational AI)</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Nov 2025 – Present</span>
+                    </div>
                     <div class="role">AI Developer (R&amp;D)</div>
                     <p>Developed an AI chatbot using ML.NET and ONNX intent detection. Designed a dynamic retraining pipeline and a 10-minute session inactivity manager. Implemented intent-based function calling to guide users through the full ticket purchase lifecycle.</p>
                     <div class="tech"><b>Tech:</b> ML.NET, ONNX, .NET, SQL</div>
                 </div>
 
+                <!-- Project 6: Arc One -->
                 <div class="proj-card">
-                    <h4>Care Pro Data Migration Pipeline</h4>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">Arc One Pipeline</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Jan 2025 – Oct 2025</span>
+                    </div>
+                    <div class="role">Data Engineer</div>
+                    <p>Developed a Python-based ETL pipeline transferring data from MySQL to MS SQL Server. Built complex database views to generate analytical reports consumed by Apache Superset dashboards.</p>
+                    <div class="tech"><b>Tech:</b> Python, MySQL, MS SQL, Superset</div>
+                </div>
+
+                <!-- Project 7: Ageing Endix -->
+                <div class="proj-card">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">Ageing Endix Pipeline</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Jan 2025 – Oct 2025</span>
+                    </div>
+                    <div class="role">Data Engineer</div>
+                    <p>Built a Python ETL pipeline migrating data from MySQL to MS SQL Server. Engineered reporting views and data models to generate actionable insights for Apache Superset.</p>
+                    <div class="tech"><b>Tech:</b> Python, MySQL, MS SQL, Superset</div>
+                </div>
+
+                <!-- Project 8: Care Pro -->
+                <div class="proj-card">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">Care Pro Data Migration</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Jan 2024 – Dec 2024</span>
+                    </div>
                     <div class="role">Data Engineer</div>
                     <p>Designed a multi-system migration flow (SmartCare Plus → Care Pro → SCRS). Developed ETL logic for data cleaning, transformation, and validation, ensuring cross-system data consistency for large-scale structured data.</p>
                     <div class="tech"><b>Tech:</b> MS SQL Server, SSIS, SQL</div>
                 </div>
 
+                <!-- Project 9: BTMS -->
                 <div class="proj-card">
-                    <h4>BTMS — Bus Ticket Management (Zambia)</h4>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">BTMS — Bus Ticket Management (Zambia)</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Mar 2023 – Dec 2024</span>
+                    </div>
                     <div class="role">Data Engineer &amp; Backend Developer</div>
                     <p>Designed the complete PostgreSQL database schema for both OLTP and analytics. Built complex SQL functions for reporting and developed APIs for report generation, enabling real-time reporting for operations.</p>
                     <div class="tech"><b>Tech:</b> PostgreSQL, ASP.NET Web API</div>
                 </div>
 
+                <!-- Project 10: RewardsPipeline -->
                 <div class="proj-card">
-                    <h4>RewardsPipeline — ETL System</h4>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                        <h4 style="margin-bottom:0;">RewardsPipeline — ETL System</h4>
+                        <span style="font-size:11px; background:rgba(56,189,248,0.1); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--accent); white-space:nowrap;">Jun 2023 – Dec 2023</span>
+                    </div>
                     <div class="role">Data Engineer</div>
                     <p>Built an automated ETL pipeline for NoSQL → relational migration using pymongo and pyodbc. Dockerized the solution for scalability and used environment configs for flexibility, ensuring data integrity and repeatability.</p>
                     <div class="tech"><b>Tech:</b> Python, MongoDB, MS SQL, Docker</div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -282,7 +351,7 @@
         <div class="wrap">
             © 2026 Biplob Roy · Built with HTML, CSS &amp; a bit of coffee ☕ <br>
             <span style="display: inline-block; margin-top: 10px; padding: 4px 12px; background: rgba(56, 189, 248, 0.1); border: 1px solid var(--border); border-radius: 20px; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">
-                ✓ Last Updated: October 31, 2026
+                ✓ Last Updated: November 1, 2026
             </span>
         </div>
     </footer>
